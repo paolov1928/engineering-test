@@ -1,0 +1,54 @@
+-# frozen_string_literal: true
+
+.container-fluid
+  .row.justify-content-center
+    .col-10
+      .card
+        .card-body
+          .form-inputs
+            = builder.input :name
+            = builder.input :tagline do
+              = react_component "admin/TextArea",
+                id: form_field_id(builder, :tagline),
+                name: form_field_name(builder, :tagline),
+                value: builder.object.tagline,
+                className: "form-control",
+                rows: 1,
+                maxLength: 140,
+                forceSingle: true
+            = builder.input :overview do
+              = react_component "admin/TextArea",
+                id: form_field_id(builder, :overview),
+                name: form_field_name(builder, :overview),
+                value: builder.object.overview,
+                className: "form-control",
+                rows: 6,
+                maxLength: 800
+            .row
+              .col-6
+                = render "upload_field",
+                  builder: builder,
+                  attachment_name: :hero_image
+              .col-6
+                = render "upload_field",
+                  builder: builder,
+                  attachment_name: :overview_image
+
+    .col-10
+      .card
+        .card-header
+          Ticket Types
+        .card-body
+          = render "variants/fields_for",
+            builder: builder,
+            label: "Add Ticket",
+            association: :ticket_types
+    .col-10
+      .card
+        .card-header
+          Extras
+        .card-body
+          = render "variants/fields_for",
+            builder: builder,
+            label: "Add Extra",
+            association: :extras

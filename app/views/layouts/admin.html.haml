@@ -1,0 +1,36 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title FixersEngTest
+    - if Rails.env.test?
+      %meta{ name: "testMode", content: "1" }
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'admin', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'admin', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application'
+    = stylesheet_link_tag "//fonts.googleapis.com/css?family=Karma|Raleway:300,500,700", media: "all"
+  %body
+    #wrapper
+      .content-page
+        .content
+          .container-fluid
+            .page-wrapper
+              .page-content
+                .container-fluid
+                  - if notice.present?
+                    .alert.alert-success.p-2.text-center.text-dark
+                      %h4
+                        = notice
+                  - if alert.present?
+                    .alert.alert-danger.p-2.text-center.text-dark
+                      %h4
+                        = notice
+                  .row
+                    .col-12
+                      .page-title-box
+                        .d-flex.flex-column.align-items-left.page-title-left
+                          - if content_for?(:header)
+                            %h4= yield(:header)
+                  = yield

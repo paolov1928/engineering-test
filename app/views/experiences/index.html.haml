@@ -1,0 +1,25 @@
+.container
+  %h1 experiences
+
+  %table.w-100
+    %thead
+      %tr
+        %th{ width: "50%" }
+        %th
+        %th
+        %th
+
+    %tbody
+      - @experiences.each do |experience|
+        %tr
+          %td{ width: "50%" }
+            %h4.mb-0
+              = experience
+          %td= link_to "Show", experience
+          %td= link_to "Edit", edit_experience_path(experience)
+          %td= link_to "Destroy", experience, method: :delete, data: { confirm: "Are you sure?" }
+
+
+  %br
+
+  = link_to "New Experience", new_experience_path

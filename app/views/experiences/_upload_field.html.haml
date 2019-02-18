@@ -1,0 +1,7 @@
+= builder.input attachment_name, hint: false do
+  = react_component "ImageUpload",
+    name: form_field_name(builder, attachment_name),
+    id: form_field_id(builder, attachment_name),
+    url: rails_direct_uploads_url,
+    signature:  attachment_signature(builder.object.public_send(attachment_name)),
+    current_image: attachment_url(builder.object.public_send(attachment_name))

@@ -1,24 +1,40 @@
 {
   "presets": [
-    ["env", {
-      "modules": false,
-      "targets": {
-        "browsers": "> 1%",
-        "uglify": true
-      },
-      "useBuiltIns": true,
-      "include": ["es6.array.from"]
-    }]
+    [
+      "env",
+      {
+        "modules": false,
+        "targets": {
+          "browsers": "> 1%",
+          "uglify": true
+        },
+        "useBuiltIns": true,
+        "include": [
+          "es6.array.from"
+        ]
+      }
+    ],
+    "react"
   ],
   "env": {
     "test": {
-      "presets": ["env", "react"],
-      "plugins": ["transform-es2015-modules-commonjs"]
+      "presets": [
+        "env",
+        "react"
+      ],
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
     }
   },
   "plugins": [
     "syntax-dynamic-import",
-    ["transform-class-properties", { "spec": true }],
+    [
+      "transform-class-properties",
+      {
+        "spec": true
+      }
+    ],
     "transform-object-rest-spread"
   ]
 }

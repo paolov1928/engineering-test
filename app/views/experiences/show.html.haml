@@ -1,0 +1,11 @@
+%nav.navbar.fixed-top.navbar-light.bg-faded
+  .container.d-flex.justify-content-end
+    = link_to 'Edit', edit_experience_path(@experience), class: "btn btn-primary ml-auto"
+
+= render "hero_block", product: @experience
+= render "overview_block", product: @experience
+- if @experience.ticket_types.exists?
+  = render "variant_block", product: @experience, association: :ticket_types, heading: @experience.name
+
+- if @experience.extras.exists?
+  = render "variant_block", product: @experience, association: :extras, heading: "Extras"

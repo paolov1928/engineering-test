@@ -1,0 +1,15 @@
+.container
+  .row
+    .col-3
+      Name
+    .col-3
+      Price
+    .col-5
+      Tagline
+  = builder.simple_fields_for(association, defaults: {label: false}) do |ff|
+    = render "variants/form_fields", builder: ff
+
+  :ruby
+    model_object ||= builder.object.public_send(association).build
+
+  = builder.link_to_add label, association, model_object: model_object, class: "btn btn-primary"

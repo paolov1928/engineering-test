@@ -1,0 +1,80 @@
+.number-stepper {
+  @include media-breakpoint-up(md) {
+    width: auto;
+  }
+
+  .btn {
+    width: 20vw;
+    height: 20vw;
+    border-color: $input-border-color !important;
+
+    @include media-breakpoint-up(md) {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &.input-group .form-control {
+    font-size: 3rem;
+    min-width: 3rem;
+    text-align: center;
+    color: black;
+    background: white !important;
+    cursor: default;
+    padding: 0.5rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1rem;
+      width: 3rem;
+    }
+  }
+}
+
+.responsive .book-cell {
+  display: block !important;
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    display: table-cell;
+  }
+}
+
+.number-stepper-round {
+  @include media-breakpoint-up(md) {
+    width: auto;
+  }
+
+  .btn {
+    width: 30px !important;
+    padding:0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid map-get($pallette, orange) !important;
+    color: map-get($pallette, orange);
+    z-index: 4;
+
+    &:hover, &:active {
+      border: 1px solid map-get($pallette, orange) !important;
+      background-color: map-get($pallette, orange);
+      color: #fff;
+    }
+  }
+
+  &.input-group .form-control {
+    font-size: 2rem;
+    min-width: 2rem;
+    text-align: center;
+    color: black;
+    background: none;
+    cursor: default;
+    padding: 0.3rem;
+    border: none;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1rem;
+      width: 3rem;
+    }
+  }
+
+}

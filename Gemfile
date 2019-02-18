@@ -1,11 +1,13 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.4.2'
+ruby "2.5.1"
 
 gem "haml-rails",  "~> 1.0"
 gem "jquery-rails"
 gem "jquery-ui-rails"
+gem "nested_form"
+gem "money-rails", "~>1"
 gem "pg",          "~> 0.18"
 gem "puma",        "~> 3.0"
 gem "redis"
@@ -22,12 +24,14 @@ gem "react-rails", "~> 2.4.0"
 
 gem "active_model_serializers", "~> 0.10.0"
 
-gem "fixers_base", "~> 4.0.2",
+gem "fixers_base", "~> 4.1.6",
   source: "https://XV-y4vJExfemQxxPKsTZ@gem.fury.io/h_app66516079"
 
 group :development, :test do
   gem "byebug", platform: :mri
   gem "capybara"
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
   gem "database_cleaner"
   # gem "dotenv-rails"
   gem "factory_bot_rails"

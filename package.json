@@ -1,5 +1,80 @@
 {
-  "name": "fixers-eng-test",
-  "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "activestorage": "^5.2.1-1",
+    "autoprefixer": "^7.1.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "7.x",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.1.3",
+    "classnames": "^2.2.5",
+    "compression-webpack-plugin": "^0.4.0",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "fingerprintjs2": "https://github.com/Valve/fingerprintjs2.git#1.4.4",
+    "fixers-tinker": "^2.0.1",
+    "js-cookie": "^2.2.0",
+    "js-yaml": "^3.8.4",
+    "lodash": "^4.17.4",
+    "path-complete-extname": "^0.1.0",
+    "postcss-loader": "^2.0.6",
+    "postcss-smart-import": "^0.7.4",
+    "precss": "^1.4.0",
+    "prop-types": "^15.7.2",
+    "raw-loader": "^0.5.1",
+    "rc-progress": "^2.3.0",
+    "react": "^16.8.2",
+    "react-ace": "^6.1.4",
+    "react-activestorage-provider": "^0.1.1",
+    "react-addons-shallow-compare": "^15.6.0",
+    "react-color": "^2.14.1",
+    "react-dates": "^16.7.0",
+    "react-dom": "^16.8.2",
+    "react-dropzone": "^4.2.11",
+    "react-froala-wysiwyg": "^2.8.5",
+    "react_ujs": "^2.4.4",
+    "resolve-url-loader": "^2.0.2",
+    "sass-loader": "^6.0.5",
+    "style-loader": "^0.18.2",
+    "webpack": "^2.6.1",
+    "webpack-manifest-plugin": "^1.1.0",
+    "webpack-merge": "^4.1.0"
+  },
+  "devDependencies": {
+    "enzyme": "^3.4.4",
+    "enzyme-adapter-react-16": "1.6.0",
+    "jest": "^23.5.0",
+    "jsdom": "^11.12.0",
+    "webpack-dev-server": "2.11.2"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "roots": [
+      "app/javascript",
+      "spec/javascript"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "app/javascript"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/spec/javascript/setupTests.js",
+    "testPathIgnorePatterns": [
+      "<rootDir>/config/webpack/test.js"
+    ],
+    "coverageDirectory": "coverage/frontend",
+    "collectCoverageFrom": [
+      "app/javascript/**/*.{js,jsx}",
+      "!**/node_modules/**",
+      "!app/javascript/packs/**",
+      "!app/javascript/apis/**"
+    ]
+  }
 }

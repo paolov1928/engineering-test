@@ -1,0 +1,16 @@
+%section.block.pt-0
+  %article.block-content
+    .row
+      .col-12.col-md-6
+        .listing-overview
+          %h6.mb-3
+            = t("products.sections.overview")
+            %hr{ style: "width:3rem;" }
+
+          = simple_format(product.overview)
+
+  .block-background.hidden-md-down
+    .container.h-100{ style: "padding-bottom:3rem;" }
+      .row.h-100
+        .col-8.h-100.offset-md-4
+          = faux_image_tag product.overview_image_url

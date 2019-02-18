@@ -1,0 +1,15 @@
+- provide :header do
+  Editing #{@experience}
+%nav.navbar.fixed-top.navbar-light.bg-faded
+  .container.d-flex.justify-content-end
+    = link_to 'View Experience', @experience, class: "btn btn-primary ml-auto"
+
+= simple_nested_form_for @experience, wrapper: :vertical_form do |f|
+  = f.error_notification
+  = f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present?
+  = render 'form_fields', builder: f
+
+
+  %nav.navbar.fixed-bottom.navbar-light.bg-faded
+    .container.d-flex.justify-content-end
+      = f.button :submit, class: "ml-auto"

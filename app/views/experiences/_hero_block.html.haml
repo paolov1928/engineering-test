@@ -1,0 +1,14 @@
+%section.block#overview
+  %article.block-content
+    %header.festival-header
+      .row
+        .col
+          %h1.mb-3= product.name
+
+          %p= product.tagline
+
+        .mb-3.w-100.hidden-md-up
+
+        .col
+          = faux_image_tag product.hero_image_url,
+            class: "aspect-16-9 full-bleed-sm-down"
