@@ -6,6 +6,8 @@
       Price
     .col-5
       Tagline
+    .col-0
+      Segment
   = builder.simple_fields_for(association, defaults: {label: false}) do |ff|
     = render "variants/form_fields", builder: ff
 
