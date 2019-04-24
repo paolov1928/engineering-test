@@ -2,6 +2,7 @@
   "dependencies": {
     "@rails/webpacker": "3.5",
     "activestorage": "^5.2.1-1",
+    "array-move": "^2.1.0",
     "autoprefixer": "^7.1.1",
     "babel-core": "^6.25.0",
     "babel-loader": "7.x",
@@ -38,6 +39,7 @@
     "react-dom": "^16.8.2",
     "react-dropzone": "^4.2.11",
     "react-froala-wysiwyg": "^2.8.5",
+    "react-sortable-hoc": "^1.9.1",
     "react_ujs": "^2.4.4",
     "resolve-url-loader": "^2.0.2",
     "sass-loader": "^6.0.5",
