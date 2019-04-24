@@ -14,7 +14,7 @@ class VariantBlock extends React.Component {
   return (
     <div className='table availability-table'>
       <div className='table-body'>
-        {variants.filter(a=> a.segment.includes(heading)).map(variant => (
+        {variants.filter(v=> v.segment.includes(heading)).sort((a,b)=> Number(b.displayPrice.replace(/[^0-9\.-]+/g,"")) - Number(a.displayPrice.replace(/[^0-9\.-]+/g,""))).map(variant => (
           <BookingTableRow
             key={variant.id}
             variant={variant}
@@ -27,4 +27,5 @@ class VariantBlock extends React.Component {
 }
 
 export default VariantBlock
-// .filter(a=> a.name.includes('release'))
+// Insert the below before iteration
+// let sortingObject = {default: 'soldOut', name: .sort((a,b)=> a.name.localeCompare(b.name)), price: .sort((a,b)=> Number(a.displayPrice.replace(/[^0-9\.-]+/g,"")) - Number(b.displayPrice.replace(/[^0-9\.-]+/g,""))) }
