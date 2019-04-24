@@ -8,6 +8,7 @@ class CreateExperiences < ActiveRecord::Migration[5.2]
       t.string :tagline, default: nil, null: false
       t.string :overview, default: nil, null: false
       t.timestamps
+      # t.array :options, default: nil, null: false
     end
   end
 end
