@@ -47,7 +47,7 @@ class ExperiencesController < ApplicationController
 
     def experience_params
       params.require(:experience).permit(
-        %i{name tagline overview hero_image overview_image},
+        %i{name tagline overview hero_image overview_image typeAndExtraSort},
         ticket_types_attributes: {},
         extras_attributes: {}
       )
