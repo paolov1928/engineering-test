@@ -22,6 +22,10 @@ class BookingTableRow extends React.Component {
     this.updateQuantity = this.updateQuantity.bind(this)
   }
 
+  componentDidMount(){
+    console.log(this.props.variant.name)
+  }
+
   updateQuantity(value){
     this.setState({quantity: value})
   }

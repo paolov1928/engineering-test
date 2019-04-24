@@ -7,5 +7,11 @@
 - if @experience.ticket_types.exists?
   = render "variant_block", product: @experience, association: :ticket_types, heading: @experience.name
 
+- if @experience.ticket_types.exists?
+  = render "variant_block", product: @experience, association: :ticket_types, heading: "Short Stay Tickets", content: "heading 2"
+
 - if @experience.extras.exists?
-  = render "variant_block", product: @experience, association: :extras, heading: "Extras"
+  = render "variant_block", product: @experience, association: :extras, heading: "Equipment Hire"
+
+- if @experience.extras.exists?
+  = render "variant_block", product: @experience, association: :extras, heading: "Lessons"
