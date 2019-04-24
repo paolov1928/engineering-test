@@ -34,7 +34,7 @@ Find the trail towards secret adventure parties, where s'mores are on the menu w
 
   experience.extras.create([
     {name: "Platinum Ski Hire", tagline: "Advanced equipment for experienced skiers.", price: 199, segment: "Equipment Hire"},
-    {name: "Platinum Snowboard Hire", tagline: "Advanced equipment for experienced skiers.", price: 199, sold_out: true}, segment: "Equipment Hire",
+    {name: "Platinum Snowboard Hire", tagline: "Advanced equipment for experienced skiers.", price: 199, sold_out: true, segment: "Equipment Hire"},
     {name: "Gold Ski Hire", tagline: "Beginner equipment for beginner skiers with little or no experience.", price: 150, segment: "Equipment Hire"},
     {name: "Gold Snowboard Hire",  tagline: "Beginner equipment for beginner skiers with little or no experience.", price: 150, segment: "Equipment Hire"},
     {name: "Beginner ski lesson", tagline: "Complete beginners who have never skied or had any lessons on snow before.", price: 89, segment: "Lessons"},
