@@ -33,6 +33,10 @@
                 = render "upload_field",
                   builder: builder,
                   attachment_name: :overview_image
+            .row
+            .col-6
+              Type and Extra Sort
+              = builder.select :typeAndExtraSort, ["Sold Out", "Price (H to L)", "Price (L to H)", "Alphabetically"]
 
     .col-10
       .card
