@@ -10,11 +10,11 @@ class VariantBlock extends React.Component {
   }
 
   render() {
-    let { variants } = this.props
+    let { variants, heading } = this.props
   return (
     <div className='table availability-table'>
       <div className='table-body'>
-        {variants.map(variant => (
+        {variants.filter(a=> a.segment.includes(heading)).map(variant => (
           <BookingTableRow
             key={variant.id}
             variant={variant}
@@ -27,3 +27,4 @@ class VariantBlock extends React.Component {
 }
 
 export default VariantBlock
+// .filter(a=> a.name.includes('release'))
