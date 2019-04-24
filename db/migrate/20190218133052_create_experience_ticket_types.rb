@@ -8,7 +8,7 @@ class CreateExperienceTicketTypes < ActiveRecord::Migration[5.2]
         foreign_key: { on_delete: :cascade }
 
       t.string :name, default: nil, null: false
-      t.string :segment, default: nil
+      t.string :segment, default: "Rise Festival"
       t.string :tagline
       t.integer :price_fractional
       t.boolean :sold_out, default: false
