@@ -1,3 +1,5 @@
+useful command: rails db:drop && rails db:create && rails db:migrate && rails db:seed && foreman start
+
 # Fixers Engineering Test - Ticket Organisation
 
 ### The Brief
