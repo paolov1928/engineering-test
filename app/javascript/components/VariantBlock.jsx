@@ -1,9 +1,16 @@
 import React from 'react'
 import { BookingTableRow } from 'components/listing'
 
-function VariantBlock(props) {
-  let { variants } = props
 
+
+class VariantBlock extends React.Component {
+
+  componentDidMount(){
+    console.log(this.props)
+  }
+
+  render() {
+    let { variants } = this.props
   return (
     <div className='table availability-table'>
       <div className='table-body'>
@@ -16,6 +23,7 @@ function VariantBlock(props) {
       </div>
     </div>
   )
+}
 }
 
 export default VariantBlock
