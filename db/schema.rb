@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2019_02_18_135458) do
     t.string "name", null: false
     t.string "tagline", null: false
     t.string "overview", null: false
+    t.string "typeAndExtraSort", default: "Sold Out"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
