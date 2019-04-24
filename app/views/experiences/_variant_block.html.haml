@@ -7,4 +7,4 @@
           %hr{ style: "width:3rem;" }
 
     = react_component "VariantBlock",
-      variants: serialize(product.public_send(association), each_serializer: VariantSerializer).as_json
+      variants: serialize(product.public_send(association), each_serializer: VariantSerializer).as_json, heading: heading
