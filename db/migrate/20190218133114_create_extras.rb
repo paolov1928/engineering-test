@@ -9,6 +9,7 @@ class CreateExtras < ActiveRecord::Migration[5.2]
         foreign_key: false
 
       t.string :name, default: nil, null: false
+      t.string :segment, default: nil
       t.string :tagline
       t.integer :price_fractional
       t.boolean :sold_out, default: false

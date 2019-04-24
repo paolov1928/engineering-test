@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2019_02_18_135458) do
   create_table "experience_ticket_types", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
     t.uuid "experience_id", null: false
     t.string "name", null: false
+    t.string "segment"
     t.string "tagline"
     t.integer "price_fractional"
     t.boolean "sold_out", default: false
@@ -60,6 +61,7 @@ ActiveRecord::Schema.define(version: 2019_02_18_135458) do
     t.string "product_type", null: false
     t.uuid "product_id", null: false
     t.string "name", null: false
+    t.string "segment"
     t.string "tagline"
     t.integer "price_fractional"
     t.boolean "sold_out", default: false
