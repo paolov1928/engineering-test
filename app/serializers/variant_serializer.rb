@@ -10,18 +10,5 @@ class VariantSerializer < ActiveModel::Serializer
     "pp"
   end
 
-  def segment
-    if object.name.downcase.include? "release"
-   return "Rise Festival"
- elsif object.name.downcase.include? "ticket"
-   return "Short Stay Tickets"
- elsif object.name.downcase.include? "hire"
-   return "Equipment Hire"
- elsif object.name.downcase.include? "lesson"
-   return "Lessons"
-    else
-       return "unknown"
-    end
-
-  end
+  
 end
