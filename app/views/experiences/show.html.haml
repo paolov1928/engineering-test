@@ -8,7 +8,7 @@
   = render "variant_block", product: @experience, association: :ticket_types, heading: @experience.name, sort: @experience.typeAndExtraSort
 
 - if @experience.ticket_types.exists?
-  = render "variant_block", product: @experience, association: :ticket_types, heading: "Short Stay Tickets", content: "heading 2", sort: @experience.typeAndExtraSort
+  = render "variant_block", product: @experience, association: :ticket_types, heading: "Short Stay Tickets", sort: @experience.typeAndExtraSort
 
 - if @experience.extras.exists?
   = render "variant_block", product: @experience, association: :extras, heading: "Equipment Hire", sort: @experience.typeAndExtraSort

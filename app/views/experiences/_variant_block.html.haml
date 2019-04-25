@@ -5,6 +5,9 @@
         %h4.m-0
           = heading
           %hr{ style: "width:3rem;" }
+            <br>
+            %p.m-0
+              = 'subheading'
 
     = react_component "VariantBlock",
       variants: serialize(product.public_send(association), each_serializer: VariantSerializer).as_json, heading: heading, sort: sort
