@@ -1,3 +1,7 @@
+# My Explanation
+
+My thoughts are explained on the submission email. Really enjoyed the task!
+
 useful command: rails db:drop && rails db:create && rails db:migrate && rails db:seed && foreman start
 
 # Fixers Engineering Test - Ticket Organisation
